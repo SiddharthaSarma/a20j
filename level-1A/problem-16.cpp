@@ -2,22 +2,19 @@
 // 431/A Black Square
 
 #include <bits/stdc++.h>
-
-#define ll long long
-
 using namespace std;
-
+ 
 int main() {
   int a[4];
   for (int i = 0; i < 4; i++) {
     cin >> a[i];
   }
-  ll i;
-  cin >> i;
-  ll sum = 0;
-  while(i) {
-    sum += a [(i % 10) - 1];
-    i /= 10;
+  string s;
+  cin >> s;
+  int sum = 0;
+  for (char c: s) {
+    int t = c - '0' - 1;
+    sum += a[t];
   }
   cout << sum << endl;
   return 0;
