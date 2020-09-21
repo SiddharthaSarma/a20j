@@ -8,13 +8,11 @@ using namespace std;
 int main() {
   int n, k;
   cin >> n >> k;
-  for (char i = 'a', j = 0; j < k; j++) {
-    cout << i;
-    i++;
+  string s = "abcdefghijklmnopqrstuvwxyz";
+  string s2 = "";
+  for (int i = 0; i < n; i++) {
+    s2 += s[i % k];
   }
-  for (char i = 'a', j = 0; j < n - k; j++) {
-    cout << i;
-  }
-  cout << endl;
+  cout << s2 << endl;
   return 0;
 }
